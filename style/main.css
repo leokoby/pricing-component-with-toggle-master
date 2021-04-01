@@ -1,0 +1,255 @@
+@import './responsive.css';
+
+:root {
+  --LinearGradient: #a3a8f0 to #696fdd;
+
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--VeryLightGrayishBlue);
+  position: relative;
+}
+
+.img-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.img-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  color: var(--GrayishBlue);
+}
+
+/*------------------------------------- botao ---------------------------- */
+.switch-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--LightGrayishBlue);
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    20deg,
+    hsl(236, 72%, 79%) 20%,
+    hsl(237, 63%, 64%) 90%
+  );
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(
+    20deg,
+    hsl(236, 72%, 79%) 20%,
+    hsl(237, 63%, 64%) 90%
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* ------------------------------------fim SWITCH ------------------------------------ */
+
+.container {
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  width: 300px;
+  height: 400px;
+
+  padding: 20px 20px;
+  background-color: #fff;
+  color: var(--GrayishBlue);
+  box-shadow: 0px 0px 20px rgba(142, 146, 223, 0.658);
+  z-index: 1;
+}
+.active{
+    background: linear-gradient(140deg, rgba(163,168,240,1) 30%, rgba(105,111,221,1) 100%);
+    border-radius: 10px;
+    height: 440px;
+    color: var(--VeryLightGrayishBlue);
+}
+.active-price{
+    color: var(--VeryLightGrayishBlue);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 20px 0;
+}
+
+.box-container:nth-child(1) {
+    border-radius: 10px;
+}
+.box-container:nth-child(2) {
+   z-index: 2;
+}
+.box-container:nth-child(3) {
+    border-radius:10px;
+}
+
+.box-container .price {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--DarkGrayishBlue);
+  margin: 20px 0;
+}
+
+.box-container ul {
+  list-style: none;
+}
+
+.box-container ul li {
+  padding: 20px;
+}
+
+.box-container ul li:nth-child(1) {
+  border-top: 2px solid var(--VeryLightGrayishBlue);
+}
+.box-container ul li:nth-child(2) {
+  border-top: 2px solid var(--VeryLightGrayishBlue);
+  border-bottom: 2px solid var(--VeryLightGrayishBlue);
+}
+.box-container ul li:nth-child(3) {
+  border-bottom: 2px solid var(--VeryLightGrayishBlue);
+}
+
+.box-container ul li p {
+  text-align: center;
+}
+
+.box-container .box-btn {
+  padding: 10px 60px;
+  margin: 20px 0;
+  text-align: center;
+  color: var(--VeryLightGrayishBlue);
+  text-decoration: none;
+  background:linear-gradient(140deg, rgba(163,168,240,1) 30%, rgba(105,111,221,1) 100%);
+  border-radius: 5px;
+  transition: all 200ms;
+}
+
+.box-container .btn-active{
+    margin: 20px 0;
+    padding: 10px 60px;
+    text-align: center;
+    color: var(--VeryLightGrayishBlue);
+    text-decoration: none;
+    background:transparent;
+    background-color:var(--VeryLightGrayishBlue); 
+    color: var(--GrayishBlue);
+    border-radius: 5px;
+
+}
+
+.hidden{
+  display: block;
+}
+
+#box-monthly{
+  display: none;
+}
+
+/* HOVER BTN */
+
+.box-container .box-btn:hover{
+    background: transparent;
+    border: 1px solid var(--LightGrayishBlue);
+    color:var(--GrayishBlue);
+    
+}
+.box-container .btn-active:hover{
+    background: transparent;
+    border: 1px solid var(--VeryLightGrayishBlue);
+    color: var(--VeryLightGrayishBlue);
+}
+

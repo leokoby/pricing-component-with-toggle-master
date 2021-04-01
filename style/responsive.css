@@ -1,0 +1,33 @@
+/* START RESPONSIVE */
+@media(min-width:910px){
+    .container .box-container:nth-child(1) {
+        border-radius: 10px 0px 0px 10px;
+    }
+    .container .box-container:nth-child(3) {
+        border-radius:0px 10px 10px 0px;
+    }
+      
+}
+
+
+
+@media(max-width:900px){
+    .img-bottom {
+       display: none;
+      }
+      
+      .img-top {
+        width: 200px;
+      }
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .box-container:nth-child(1) {
+        border-radius: 10px;
+    }
+    .box-container:nth-child(3) {
+        border-radius:10px;
+    }
+      
+}
