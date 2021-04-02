@@ -11,7 +11,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
@@ -45,8 +45,8 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- LinkedIn - [Leonardo Kobylinski](https://www.linkedin.com/in/leonardo-kobylinski-3069781b0/)
+- GitHub - [Leonardo Kobylinski](https://github.com/leokoby)
+- Frontend Mentor - [@leokoby](https://www.frontendmentor.io/profile/leokoby)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
